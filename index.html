@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Responsive Full-Width Background Images</title>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<script src="js/lulu-parallax.js"></script>
+<link href="css/lulu-parallax.css" type="text/css" rel="stylesheet" />
+<link href="css/demo.css" type="text/css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Monoton|Open+Sans" rel="stylesheet">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/nav.css">
+
+
+<script>
+$(document).ready(function() {
+  luluParallax();
+});
+var resizeTimer;
+$(window).on('resize', function(e) {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+	luluParallax(); // Fire the plugin again
+	// location.reload(true); // Reload the page
+  }, 400);
+});
+</script>
+
+<script>
+
+  function myFunction() {
+    var x = document.getElementById("myTopnavmobile");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<script>
+
+ $(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+}); 
+
+</script>
+
+
+</head>
+<body>
+
+
+
+<div class="gradient">
+
+<div class="parallax-group group-b" style="overflow: hidden;">
+
+  <div class="parallax-container background against" data-rate=".25" style="overflow: hidden;">
+  </div>
+  <div class="parallax-container foreground with" data-rate=".25">
+  	<div class="info info-b">
+  		<img src="images/sun.png" style="width: 100%; pointer-events: none; position: fixed;" class="sun">
+  	</div>
+  </div>
+
+      <div class="topnav navbar-fixed-top" id="myTopnav" style="position: fixed;">
+        <a href="index.html"></a><h2>EAGLES</h2></a>
+        <div class="clearfix"></div>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Events</a>
+        <a href="index.html">Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+  <div class="parallax-container foreground with" data-rate=".5">
+  	<div class="info info-b">
+  		<img src="images/tree-2.png" style="width: 100%;" class="tree-2">
+  	</div>
+  </div>
+  <div class="parallax-container foreground with" data-rate=".25">
+  	<div class="info info-c">
+  		<img src="images/tree-1.png" style="width: 100%;">
+  		<div id="content-box">
+          <section class="column-70" id="doobie-brothers"> 
+            <h1>The Doobie Brothers
+            <br>
+            Added to Eagles AT&amp;T Park Show
+            </h1>
+            <br><br>
+            Jun 4, 2018
+            <br><br>
+            Iconic Bay-area band, The Doobie Brothers, have been
+            added to the Eagles’ AT&amp;T Park show with the Zac Brown
+            Band on Saturday, September 20. This is in addition to the
+            previously announced Eagles show with The Doobie
+            Brothers, September 22, in San Diego, CA, at Petco Park.
+            <br><br>
+            Tickets are on sale now via Ticketmaster.com
+            <br><br><br>
+            <a href="#" class="book-button">BOOK A TICKET</a>
+          </section>
+          <section class="column-30">
+            <img src="images/eaglesalreadygone.png" class="already-gone">
+          </section>
+  		</div>
+
+                        <div class="clearfix"></div>
+  	</div>
+  </div>
+    <div class="parallax-container foreground with" data-rate="0" style="pointer-events: none;">
+  	<div class="info info-b" id="zio" style="pointer-events: none; text-align: center;">
+  		<img src="images/logo.png" id="logo">
+  		  		<h1 class="header-text">40th ANNIVERSARY ALBUM NOW ON SALE</h1>
+  		<br>
+  			<a href="#" class="white-button" style="pointer-events: auto;">SHOP NOW</a>
+  	</div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="nav-toggle below1200">
+  <div class="nav-toggle-bar"></div>
+</div>
+<nav class="nav">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Events</a></li>
+    <li><a href="#">Gallery</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+<script src="js/nav.js"></script>
+
+
+<!-- The video -->
+<video autoplay muted loop id="myVideo" class="below1200">
+  <source src="images/background.mp4" type="video/mp4" style="height: 100vh">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content below1200">
+  <img src="images/hotel.jpg" id="hotel">
+  <h1>40th Anniversary Album Now On Sale</h1>
+  <a href="#" class="white-button2" style="pointer-events: auto;">SHOP NOW</a>
+</div>
+
+
+<div class="clearfix"></div>
+
+<section class="doobie-mobile-container">
+        <section id="doobie-mobile"> 
+            <h1>The Doobie Brothers
+            <br>
+            Added to Eagles AT&amp;T Park Show
+            </h1>
+            <br><br>
+            Jun 4, 2018
+            <br><br>
+            Iconic Bay-area band, The Doobie Brothers, have been
+            added to the Eagles’ AT&amp;T Park show with the Zac Brown
+            Band on Saturday, September 20. This is in addition to the
+            previously announced Eagles show with The Doobie
+            Brothers, September 22, in San Diego, CA, at Petco Park.
+            <br><br>
+            Tickets are on sale now via Ticketmaster.com
+            <br><br><br>
+            <a href="#" class="book-button">BOOK A TICKET</a>
+        </section>
+</section>
+
+<section class="hide-on-mobile">
+          <div id="shirt-box">
+            <div class="column-50">
+              <img src="images/shirts.png" class="shirts">
+            </div>
+            <div class="column-50" id="shirt-text">
+            <p>
+              <br>
+              <h1>Shop The Official
+              <br>  Eagles Online Store</h1>
+                <br><br>
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to
+                make a type specimen book.
+              <br><br><br><br>
+            </p>
+            <a href="#" class="red-button">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+</section>
+
+<section class="show-on-mobile mobile-shirt">
+  <p>
+              <br>
+              <h1>Shop The Official
+              <br>  Eagles Online Store</h1>
+                <br><br>
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to
+                make a type specimen book.
+              <br><br><br><br>
+            </p>
+            <a href="#" class="red-button">SHOP NOW</a>
+</section>
+
+<section id="table-container" class="hide-on-mobile">
+  <h1>UPCOMING EVENTS</h1>
+    <table id="table" class="hide-on-mobile">
+      <tr>
+        <th>Date</th>
+        <th>Venue</th>
+        <th>Location</th>
+        <th>Tickets</th>
+      </tr>
+      <tr>
+        <td>July 17, 2018</td>
+        <td>Air Canada Centre</td>
+        <td>Toronto</td>
+        <td><a href="#" class="book-button">GET A TICKET</a></td>
+      </tr>
+      <tr>
+        <td>July 17, 2018</td>
+        <td>Air Canada Centre</td>
+        <td>Toronto</td>
+        <td><a href="#" class="book-button">GET A TICKET</a></td>
+      </tr>
+      <tr>
+        <td>July 17, 2018</td>
+        <td>Air Canada Centre</td>
+        <td>Toronto</td>
+        <td><a href="#" class="book-button">GET A TICKET</a></td>
+      </tr>
+      <tr>
+        <td>July 17, 2018</td>
+        <td>Air Canada Centre</td>
+        <td>Toronto</td>
+        <td><a href="#" class="book-button">GET A TICKET</a></td>
+      </tr>
+      <tr>
+        <td>July 17, 2018</td>
+        <td>Air Canada Centre</td>
+        <td>Toronto</td>
+        <td><a href="#" class="book-button">GET A TICKET</a></td>
+      </tr>
+      <tr>
+        <td>July 17, 2018</td>
+        <td>Air Canada Centre</td>
+        <td>Toronto</td>
+        <td><a href="#" class="book-button">GET A TICKET</a></td>
+      </tr>
+    </table>
+
+<section class="show-on-mobile">
+  <table>
+    <tr>
+    <td>
+      <p>
+        July 17, 2018<br>
+        Air Canada Centre<br>
+        Toronto<br>
+      </p>
+    </td>
+  </tr>
+      <tr>
+    <td>
+      <p>
+        July 17, 2018<br>
+        Air Canada Centre<br>
+        Toronto<br>
+      </p>
+    </td>
+  </tr>
+      <tr>
+    <td>
+      <p>
+        July 17, 2018<br>
+        Air Canada Centre<br>
+        Toronto<br>
+      </p>
+    </td>
+  </tr>
+      <tr>
+    <td>
+      <p>
+        July 17, 2018<br>
+        Air Canada Centre<br>
+        Toronto<br>
+      </p>
+    </td>
+  </tr>
+      <tr>
+    <td>
+      <p>
+        July 17, 2018<br>
+        Air Canada Centre<br>
+        Toronto<br>
+      </p>
+    </td>
+  </tr>
+
+  </table>
+</section>
+
+     <a href="events.html" class="view-all">View all upcoming events...</a>
+
+
+
+
+</section>
+
+
+
+
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>EAGLES<span></span></h3>
+
+        <p class="footer-links">
+          <a href="index.html">Home</a>
+          ·
+          <a href="events.html">Events</a>
+          ·
+          <a href="gallery.html">Gallery</a>
+          ·
+          <a href="contact.html">Contact</a>
+
+        </p>
+
+        <p class="footer-company-name">Company Name &copy; 2018</p>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p>Contact Us</p>
+
+        <form action="#" method="post">
+
+          <input type="text" name="email" placeholder="Email" />
+          <textarea name="message" placeholder="Message"></textarea>
+          <button>Send</button>
+
+        </form>
+
+      </div>
+
+    </footer>
+
+</body>
+
+</html>

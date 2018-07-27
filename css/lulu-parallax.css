@@ -1,0 +1,22 @@
+.parallax-group {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.parallax-group .parallax-container {
+	width: 100%;
+	position: absolute;
+}
+.parallax-group .parallax-container.background {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.parallax-group .parallax-container.foreground.with,
+.parallax-group .parallax-container.background.against {
+	top: 0;
+	height: 100
+}
+.parallax-group .parallax-container.background.with,
+.parallax-group .parallax-container.foreground.against {
+	bottom: 0;
+}
